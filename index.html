@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин футболок</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <img class="gift" id="giftbutton" src="images/podarok.png" width="100px" alt="">
+    <header>
+        <div class="header-text">
+            <span> Футболки с принтами</span>
+            <br>
+            <span class="price"> 499 <sup>руб.</sup></span>
+            <br>
+            <span class="price-text "> Почему так дёшево?</span>
+        </div>
+        <div class="header-images">
+            <div class="header-image">
+                <img class="animate__animated animate__heartBeat "src="images/sale.png  " width="105px" height="70px" alt="">
+                <br>
+                <span>низкие цены</span>
+            </div>
+            <div class="header-image">
+                <img class="animate__animated animate__backInRight"src="images/gruzovik.png" width="98px" height="90px" alt="">
+                <br>
+                <span>доставка по всей России</span>
+            </div>
+            <div class="header-image">
+                <img class="animate__animated animate__heartBeat"src="images/hit.png" width="80px" height="80px" alt="">
+                <br>
+                <span>только хиты</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <center>
+            <div class="main-text">
+                <h2>Футболки</h2>
+                <span>100% хлопок</span>
+            </div>
+        </center>
+        <div class="main-items">
+            <div class="main-item">
+                <img class=" animate__animated animate__backInRight" src="https://cs8.pikabu.ru/post_img/big/2016/03/20/7/145846978213281321.jpg" height="300px" alt="">
+                <br>
+                <span class="item-name">Футболка</span>
+                <br>
+                <span class="item-price">499 руб.</span>
+                <br>
+                <button onclick='alert("добавили в заказ:\n 1 \"чёрная\" Футболка ")' class="button"> добавить в
+                    заказ</button>
+            </div>
+            <div class="main-item">
+                <img class="animate__animated animate__backInLeft" src="https://img4.playprint.ru/products/men-tshirt/1/9/3/1930337/Fncv2bhucWdthGpQd2UtJybtnZQvNnNyAT-0.jpg" height="300px" alt="">
+                <br>
+                <span class="item-name">Футболка</span>
+                <br>
+                <span class="item-price">499 руб.</span>
+                <br>
+                <button onclick='alert("добавили в заказ:\n 1 белая Футболка ")' class="button">добавить в
+                    заказ</button>
+            </div>
+        </div>
+        <section class="kupon">
+            <div class="kupon-text">
+                <span>
+
+                    Розыгрыш
+                    10 000 <sup>руб.</sup>
+                </span><br>
+                <span class="accent">
+                    Cреди обладателей <br>
+                    купонов
+                </span><br>
+                <span>
+                    Вечером 1 июня команда разыграет приз в прямом эфире !
+                </span>
+            </div>
+            <div class="kupon-image">
+                <img src="images/money.jpg" width="200" height="200" alt="">
+            </div>
+        </section>
+        <section class="wow order-form animate__animated animate__tada">
+            <form action="/action-page.php">
+                <h2>Оформление заказа</h2>
+                <label for="fname">Имя</label>
+                <input type="text" id="fname" name="fname">
+
+                <label for="fname">Фамилия</label>
+                <input type="text" id="lname" name="lname">
+
+                <label for="email">электронная почта</label>
+                <input type="email" id="email" name="email">
+                <label for="fname">Телефон</label>
+                <input type="text" id="phone" name="phone">
+                <div class="payment-text"><br>
+                    Оплата
+                </div>
+                <hr>
+                <button class="button-color">перейти к оплате </button><br>
+            </form>
+        </section>
+        <!-- onclick="print_contact()" после класса -->
+        <img id="helper" class="helper"  src="images/tp.png" width="80px"  alt="">
+        <div id="helpertext" class="text">
+        <div class="helper-content">
+        <span class="closep" id="helperclose">&times;</span>
+        <p>Помощь</p>
+        <p>номер телефона-89053340758</p>
+        <p>skype-help.user12</p>
+        </div>
+        </div>
+
+        <br>
+        <div id="giftmodal" class="modal">
+            <div class="modal-content">
+                <!-- cодержимое модального окна -->
+                <span class="close" id="giftclose">&times;</span>
+                <p>привет </p>
+            </div>
+        </div>
+        <div class="rating">
+            <h2>Оцените наш сайт !</h2>
+            <img src="images/star_2.png" alt="" width="68px" height="75px" id="star-1" onmouseenter="star(1)">
+            <img src="images/star_2.png" alt="" width="68px" height="75px" id="star-2" onmouseenter="star(2)">
+            <img src="images/star_2.png" alt="" width="68px" height="75px" id="star-3" onmouseenter="star(3)">
+            <img src="images/star_2.png" alt="" width="68px" height="75px" id="star-4" onmouseenter="star(4)">
+            <img src="images/star_2.png" alt="" width="68px" height="75px" id="star-5" onmouseenter="star(5)">
+            <p onclick="resetRating()">Сброс</p>
+            <button id="sendRating">Отправить</button>
+            <P id="ratingText"></P>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="wow.min.js"></script>
+
+              <script>
+              new WOW().init();
+              </script>
+            
+</body>
+
+</html>
